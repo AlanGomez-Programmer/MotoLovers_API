@@ -1,0 +1,28 @@
+/* IMportaciones de los fonts que se utilizaran para esta página */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+:root {
+    /* Fonts */
+    --font-titulos: "Luckiest Guy", cursive;
+    --font-texto: "Google Sans", sans-serif;
+
+    /* Backgrounds (fondos)*/
+    --fondo-principal: black;
+    --fondo-secundario: white;
+    --fondo-terciario: silver;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
