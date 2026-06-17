@@ -1,0 +1,164 @@
+/* TOP 3 */
+
+.top3__botones {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.btn__moto {
+    width: 70px;
+    height: 40px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-image: url(../img/Bandera_carreras.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+
+    color: black;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn__moto:active {
+    transform: scale(.95);
+}
+
+/* TARJETA */
+
+.tarjeta__moto {
+    width: 100%;
+    background: white;
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+}
+
+#mejor__moto {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: auto;
+    border-radius: 16px;
+}
+
+.tarjeta__posicion {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.moto__info {
+    margin-top: 1rem;
+}
+
+.moto__info h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-shadow: 0.5px 4px var(--fondo-terciario);
+}
+
+/* TABLA */
+
+#tabla__moto {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+#tabla__moto th,
+#tabla__moto td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#tabla__moto th {
+    background-color: #222;
+    color: white;
+}
+
+/* CURIOSIDADES */
+
+.contenedor__curiosidades {
+    width: 100%;
+    background-color: var(--fondo-principal);
+    color: white;
+    padding: 1rem;
+}
+
+.contenedor__curiosidades h2 {
+    margin: 1rem 0;
+    text-align: center;
+    font-family: var(--font-titulos);
+}
+
+.contenido__curiosidades {
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.tarjeta__curiosidades {
+    width: 100%;
+    background-color: red;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.tarjeta__curiosidades h3 {
+    text-align: center;
+    margin-bottom: .75rem;
+}
+
+.tarjeta__curiosidades p {
+    line-height: 1.5;
+}
+
+.curiosidades__lista {
+    margin-top: .5rem;
+    margin-left: 1.5rem;
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--fondo-principal);
+    border-top: 1px solid rgba(192, 192, 192, 0.521);
+    color: white;
+    text-align: center;
+}
+
+.footer h3 {
+    margin-bottom: .5rem;
+}
+
+.footer p {
+    margin-top: .5rem;
+}
+
+.redes_sociales {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.redes_sociales img {
+    width: 35px;
+    height: 35px;
+}

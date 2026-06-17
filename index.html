@@ -1,29 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/inicio.css">
     <title>MOTOLOVERS</title>
 </head>
-<body>
-    
-    <header>
-        <div class="logo">
 
-        </div>
-        <nav>
+<body>
+
+    <header class="header">
+        <img class="logo" src="./img/Motoloveres_logo.png" alt="Logo de Motolovers">
+
+        <nav class="header__menu">
+            <input type="checkbox" id="menu" class="menu__checkbox">
+
+            <label for="menu" class="header__hamburguer">
+                &#9776;
+            </label>
+
             <ul>
                 <li><a href="">INICIO</a></li>
                 <li><a href="">COMPARAR</a></li>
                 <li><a href="">TOP 10 MEJORES MOTOS</a></li>
-                <li><a href="">SOBRE NOSOTROS</a></li>
+                <li><a href="">NOVEDADES</a></li>
             </ul>
         </nav>
     </header>
+
     <section class="contenedor">
-        <div class="contenedor-contenido">
-            
+
+        <div class="contenedor__contenido">
+
+            <main class="contenido__inicial">
+
+                <h1 class="titulo">Las Mejores Motos 2025</h1>
+
+                <div class="top3__botones">
+                    <button class="btn__moto" id="btnKawasaki">🏆 1</button>
+                    <button class="btn__moto" id="btnYamaha">🥈 2</button>
+                    <button class="btn__moto" id="btnSuzuki">🥉 3</button>
+                </div>
+
+                <article class="tarjeta__moto">
+
+                    <div class="tarjeta__posicion">
+                        <h2 id="posicion__moto"></h2>
+                    </div>
+
+                    <img
+                        id="mejor__moto"
+                        src="./img/ninja_zx-4r.jpeg"
+                        alt="Kawasaki Ninja ZX-4R"
+                    >
+
+                    <div class="moto__info">
+
+                        <h2 id="moto__nombre"></h2>
+
+                        <ul id="moto__especificaciones"></ul>
+
+                        <table id="tabla__moto">
+
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Especificación</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="cuerpo__tabla">
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </article>
+
+            </main>
+
         </div>
+
     </section>
+
+    <section class="contenedor__curiosidades">
+
+        <h2>CURIOSIDADES</h2>
+
+        <div class="contenido__curiosidades">
+
+            <article class="tarjeta__curiosidades">
+
+                <h3>Frenos ABS</h3>
+
+                <p>
+                    Los frenos <strong>ABS</strong> son una de las mejores opciones de seguridad.
+                    Evitan que las llantas se bloqueen al frenar bruscamente.
+                </p>
+
+            </article>
+
+            <article class="tarjeta__curiosidades">
+
+                <h3>Rangos de cilindraje</h3>
+
+                <p>
+                    Existen 3 rangos principales de cilindraje:
+                </p>
+
+                <ol class="curiosidades__lista">
+                    <li>Baja Cilindrada</li>
+                    <li>Media Cilindrada</li>
+                    <li>Alta Cilindrada</li>
+                </ol>
+
+            </article>
+
+            <article class="tarjeta__curiosidades">
+
+                <h3>La mejor marca de aceite para motos</h3>
+
+                <p>
+                    La marca <strong>Motul</strong> tiene algunos de los mejores aceites para motos.
+                    Su línea Motul 7100 es 100% sintética y excelente para uso exigente.
+                    El Motul 5100 es semisintético e ideal para el uso diario.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+
+        <h3>Motolovers</h3>
+
+        <p>
+            Contáctanos:
+            <br>
+            <span>motolovers@gmail.com</span>
+        </p>
+
+        <nav class="redes_sociales">
+
+            <a href="">
+                <img src="./icon/facebook_icon_130940.png" alt="Facebook">
+            </a>
+
+            <a href="">
+                <img src="./icon/3721672-instagram_108066.png" alt="Instagram">
+            </a>
+
+            <a href="">
+                <img src="./icon/twitter_x_logo_icon_258917.png" alt="X">
+            </a>
+
+        </nav>
+
+    </footer>
+
+    <script src="./js/main.js"></script>
+
 </body>
 </html>
