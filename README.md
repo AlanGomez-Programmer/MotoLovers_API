@@ -255,7 +255,7 @@ Las imágenes de las motos se encuentran en la carpeta `img/`. Puedes agregar o 
 
 - Alan Gómez - Programador Full Stack jr.
 
-- **Email**: motolovers@gmail.com
+- **Email**: alan.s.g.j.2006@gmail.com
 - **Redes Sociales**:
   - [GitHub](https://github.com/AlanGomez-Programmer)
   - [Linkedln](alan-gomez-763163320)
