@@ -5,6 +5,7 @@ const posicionMoto = document.getElementById("posicion__moto");
 const imagen = document.getElementById("mejor__moto");
 const nombreMoto = document.getElementById("moto__nombre");
 const cuerpoTabla = document.getElementById("cuerpo__tabla");
+const loadingSpinner = document.getElementById("loading-spinner");
 
 const btnKawasaki = document.getElementById("btnKawasaki");
 const btnYamaha = document.getElementById("btnYamaha");
@@ -180,9 +181,9 @@ btnSuzuki.addEventListener("click", () => {
 
 // Cargar una moto al abrir la página
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", async () => {
 
-    mostrarMoto(
+    await mostrarMoto(
 
         "Kawasaki",
         "Ninja",
@@ -193,5 +194,8 @@ window.addEventListener("DOMContentLoaded", () => {
         "🏆 Primer Lugar"
 
     );
+
+    // Ocultar el loading spinner después de cargar
+    loadingSpinner.classList.add("hidden");
 
 });
