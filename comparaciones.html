@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/comparar.css">
+    <title>Comparar Motos | MotoLovers</title>
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" src="./img/Motoloveres_logo.png" alt="Logo de Motolovers">
+
+        <nav class="header__menu">
+            <input type="checkbox" id="menu" class="menu__checkbox">
+
+            <label for="menu" class="header__hamburguer">
+                &#9776;
+            </label>
+
+            <!-- BUG CORREGIDO: links vacíos reemplazados por rutas reales -->
+            <ul>
+                <li><a href="./index.html">INICIO</a></li>
+                <li><a href="./comparaciones.html" class="active">COMPARAR</a></li>
+                <li><a href="./buscar_moto.html">BUSCAR MOTO</a></li>
+                <li><a href="./novedades.html">NOVEDADES</a></li>
+                <li><a href="./favoritos.html">FAVORITOS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contenedor">
+        <div class="contenedor__contenido">
+            <h1 class="titulo">Compara motos</h1>
+            <main class="inputs__comparaciones">
+
+    <div class="contenedor__motos">
+
+        <div class="tarjeta__moto">
+
+            <h2>Moto 1</h2>
+
+            <input id="moto1" type="text" placeholder="Marca (ej: Kawasaki)">
+
+            <input id="modelo_moto1" type="text" placeholder="Modelo (ej:  Z400)">
+
+            <input id="anio_moto1" type="number" placeholder="Año (ej: 2024)" min="1980" max="2025">
+
+        </div>
+
+
+        <div class="tarjeta__moto">
+
+            <h2>Moto 2</h2>
+
+            <input id="moto2" type="text" placeholder="Marca (ej: Yamaha)">
+
+            <input id="modelo_moto2" type="text" placeholder="Modelo (ej: R1)">
+
+            <input id="anio_moto2" type="number" placeholder="Año (ej: 2024)" min="1980" max="2025">
+
+        </div>
+
+    </div>
+
+
+    <button id="btnComparar">
+
+        Comparar
+
+    </button>
+
+
+    <table class="tabla__comparacion">
+
+        <thead>
+
+            <tr>
+
+                <th>Característica</th>
+                <th>Moto 1</th>
+                <th>Moto 2</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="cuerpoComparacion"></tbody>
+
+    </table>
+
+</main>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h3>Motolovers</h3>
+        <p>
+            Contáctanos:
+            <br>
+            <span>motolovers@gmail.com</span>
+        </p>
+        <nav class="redes_sociales">
+            <a href="#" aria-label="Facebook">
+                <img src="./icon/facebook_icon_130940.png" alt="Facebook">
+            </a>
+            <a href="#" aria-label="Instagram">
+                <img src="./icon/3721672-instagram_108066.png" alt="Instagram">
+            </a>
+            <a href="#" aria-label="X / Twitter">
+                <img src="./icon/twitter_x_logo_icon_258917.png" alt="X">
+            </a>
+        </nav>
+    </footer>
+
+    <script type="module" src="./js/comparar.js"></script>
+</body>
+
+</html>

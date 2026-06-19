@@ -1,0 +1,161 @@
+/* ── LAYOUT COMPARACIONES ── */
+
+.inputs__comparaciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contenedor__motos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+/* ── TARJETA DE MOTO ── */
+
+.tarjeta__moto {
+    width: 320px;
+    padding: 2rem;
+    border-radius: 18px;
+    background: var(--fondo-card);
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(224, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(224, 0, 0, 0.15);
+    transition: box-shadow 0.3s;
+}
+
+.tarjeta__moto:hover {
+    box-shadow: 0 0 30px rgba(224, 0, 0, 0.3);
+}
+
+.tarjeta__moto h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 1.75rem;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+}
+
+/* ── INPUTS ── */
+
+.tarjeta__moto input {
+    width: 100%;
+    padding: 13px 16px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 2px solid #333;
+    background: #111111;
+    color: white;
+    font-size: 15px;
+    font-family: var(--font-texto);
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.tarjeta__moto input::placeholder {
+    color: var(--color-texto-suave);
+}
+
+.tarjeta__moto input:hover {
+    border-color: rgba(224, 0, 0, 0.5);
+}
+
+.tarjeta__moto input:focus {
+    outline: none;
+    border-color: var(--rojo-principal);
+    box-shadow: 0 0 12px var(--rojo-glow);
+}
+
+/* ── BOTÓN COMPARAR ── */
+
+#btnComparar {
+    padding: 15px 50px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, var(--rojo-principal), var(--rojo-oscuro));
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--font-texto);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+#btnComparar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 22px var(--rojo-glow), 0 0 40px rgba(224, 0, 0, 0.2);
+}
+
+#btnComparar:active {
+    transform: scale(0.97);
+}
+
+/* ── TABLA DE COMPARACIÓN ── */
+
+.tabla__comparacion {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    background: var(--fondo-card);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.tabla__comparacion th {
+    background: linear-gradient(90deg, var(--rojo-oscuro), #500000);
+    padding: 1rem;
+    color: white;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.tabla__comparacion td {
+    padding: 1rem;
+    text-align: center;
+    color: var(--color-texto);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.95rem;
+}
+
+.tabla__comparacion td:first-child {
+    color: var(--color-texto-suave);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.tabla__comparacion tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.tabla__comparacion tr:hover td {
+    background: rgba(224, 0, 0, 0.1);
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 768px) {
+    .contenedor__motos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta__moto {
+        width: 90%;
+    }
+
+    .tabla__comparacion th,
+    .tabla__comparacion td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.85rem;
+    }
+}
