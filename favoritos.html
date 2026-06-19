@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/favoritos.css">
+    <title>Favoritos | MotoLovers</title>
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" src="./img/Motoloveres_logo.png" alt="Logo de Motolovers">
+
+        <nav class="header__menu">
+            <input type="checkbox" id="menu" class="menu__checkbox">
+
+            <label for="menu" class="header__hamburguer">
+                &#9776;
+            </label>
+
+            <ul>
+                <li><a href="./index.html">INICIO</a></li>
+                <li><a href="./comparaciones.html">COMPARAR</a></li>
+                <li><a href="./buscar_moto.html">BUSCAR MOTO</a></li>
+                <li><a href="./novedades.html">NOVEDADES</a></li>
+                <li><a href="./favoritos.html" class="active">FAVORITOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contenedor">
+        <div class="contenedor__contenido">
+            <h1 class="titulo">Mis Favoritos</h1>
+
+            <div id="loading" class="loading">
+                <p>Cargando favoritos...</p>
+            </div>
+
+            <div id="vacio" class="vacio">
+                <p>No tienes motos favoritas aún.</p>
+                <p>Agrega motos desde la sección de novedades o el buscador.</p>
+            </div>
+
+            <div id="grid__favoritos" class="grid__favoritos">
+                <!-- Las tarjetas de motos se generarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de detalles -->
+    <div id="modal__detalles" class="modal__detalles">
+        <div class="modal__contenido">
+            <button id="btn__cerrar" class="btn__cerrar">&times;</button>
+            
+            <img id="modal__imagen" src="" alt="" class="modal__imagen">
+            
+            <h2 id="modal__titulo" class="modal__titulo"></h2>
+            
+            <table class="modal__tabla">
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Especificación</th>
+                    </tr>
+                </thead>
+                <tbody id="modal__cuerpo">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h3>Motolovers</h3>
+        <p>
+            Contáctanos:
+            <br>
+            <span>motolovers@gmail.com</span>
+        </p>
+        <nav class="redes_sociales">
+            <a href="#" aria-label="Facebook">
+                <img src="./icon/facebook_icon_130940.png" alt="Facebook">
+            </a>
+            <a href="#" aria-label="Instagram">
+                <img src="./icon/3721672-instagram_108066.png" alt="Instagram">
+            </a>
+            <a href="#" aria-label="X / Twitter">
+                <img src="./icon/twitter_x_logo_icon_258917.png" alt="X">
+            </a>
+        </nav>
+    </footer>
+
+    <script type="module" src="./js/favoritos.js"></script>
+
+</body>
+
+</html>
