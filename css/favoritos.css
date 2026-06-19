@@ -1,0 +1,256 @@
+/* ── GRID DE FAVORITOS ── */
+
+.grid__favoritos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* ── TARJETA DE MOTO (SIN IMAGEN) ── */
+
+.tarjeta__moto {
+    background: var(--fondo-card);
+    border: 2px solid rgba(224, 0, 0, 0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.tarjeta__moto:hover {
+    transform: translateY(-5px);
+    border-color: var(--rojo-principal);
+    box-shadow: 0 8px 30px rgba(224, 0, 0, 0.2);
+}
+
+.tarjeta__info {
+    text-align: center;
+}
+
+.tarjeta__marca {
+    font-size: 0.9rem;
+    color: var(--color-texto-suave);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.25rem;
+}
+
+.tarjeta__modelo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px var(--rojo-glow);
+}
+
+.tarjeta__anio {
+    font-size: 0.85rem;
+    color: var(--rojo-principal);
+    font-weight: 600;
+}
+
+/* ── BOTÓN DE ELIMINAR FAVORITO ── */
+
+.btn__eliminar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(224, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    color: var(--color-texto-suave);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.btn__eliminar:hover {
+    background: rgba(224, 0, 0, 0.2);
+    border-color: var(--rojo-principal);
+    transform: scale(1.1);
+}
+
+.btn__eliminar:hover {
+    color: var(--rojo-principal);
+}
+
+/* ── ESTADO VACÍO ── */
+
+.vacio {
+    display: none;
+    text-align: center;
+    padding: 3rem;
+    color: var(--color-texto-suave);
+    background: var(--fondo-card);
+    border: 2px solid rgba(224, 0, 0, 0.3);
+    border-radius: 12px;
+    margin-top: 1rem;
+}
+
+.vacio p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+/* ── LOADING STATE ── */
+
+.loading {
+    display: none;
+    text-align: center;
+    padding: 3rem;
+    color: var(--color-texto-suave);
+    font-size: 1.1rem;
+}
+
+.loading::after {
+    content: " ...";
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: "."; }
+    40% { content: ".."; }
+    60%, 100% { content: "..."; }
+}
+
+/* ── MODAL DE DETALLES ── */
+
+.modal__detalles {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    backdrop-filter: blur(5px);
+}
+
+.modal__detalles.active {
+    display: flex;
+}
+
+.modal__contenido {
+    background: var(--fondo-terciario);
+    border: 2px solid var(--rojo-principal);
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 0 40px var(--rojo-glow);
+}
+
+.btn__cerrar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--rojo-principal);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--rojo-principal);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn__cerrar:hover {
+    background: var(--rojo-principal);
+    color: white;
+}
+
+.modal__imagen {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+}
+
+.modal__titulo {
+    font-family: var(--font-titulos);
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 15px var(--rojo-glow);
+    letter-spacing: 2px;
+}
+
+.modal__tabla {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal__tabla th,
+.modal__tabla td {
+    padding: 12px 14px;
+    text-align: left;
+}
+
+.modal__tabla th {
+    background: linear-gradient(90deg, var(--rojo-oscuro), #500000);
+    color: white;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.modal__tabla td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--color-texto);
+    font-size: 0.95rem;
+}
+
+.modal__tabla td:first-child {
+    color: var(--color-texto-suave);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal__tabla tr:hover td {
+    background: rgba(224, 0, 0, 0.08);
+}
+
+/* ── DESKTOP ── */
+
+@media (min-width: 768px) {
+    .grid__favoritos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid__favoritos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid__favoritos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
