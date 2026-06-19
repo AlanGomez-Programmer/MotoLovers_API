@@ -6,6 +6,8 @@ const imagen = document.getElementById("mejor__moto");
 const nombreMoto = document.getElementById("moto__nombre");
 const cuerpoTabla = document.getElementById("cuerpo__tabla");
 const loadingSpinner = document.getElementById("loading-spinner");
+const tarjetaMoto = document.querySelector(".tarjeta__moto");
+const tarjetasCuriosidades = document.querySelectorAll(".tarjeta__curiosidades");
 
 const btnKawasaki = document.getElementById("btnKawasaki");
 const btnYamaha = document.getElementById("btnYamaha");
@@ -92,6 +94,9 @@ async function mostrarMoto(make, model, year, ruta_img, posicion) {
 
     try {
 
+        // Quitar clase visible para reiniciar transición
+        tarjetaMoto.classList.remove("visible");
+
         const moto = await buscarMoto(make, model, year);
 
         if (!moto) {
@@ -113,6 +118,11 @@ async function mostrarMoto(make, model, year, ruta_img, posicion) {
 
         nombreMoto.textContent =
             `${moto.make} ${moto.model}`;
+
+        // Activar transición después de cargar la nueva moto
+        setTimeout(() => {
+            tarjetaMoto.classList.add("visible");
+        }, 100);
 
 
     }
@@ -197,5 +207,16 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     // Ocultar el loading spinner después de cargar
     loadingSpinner.classList.add("hidden");
+
+    // Activar transiciones de tarjetas con delay escalonado
+    setTimeout(() => {
+        tarjetaMoto.classList.add("visible");
+    }, 100);
+
+    tarjetasCuriosidades.forEach((tarjeta, index) => {
+        setTimeout(() => {
+            tarjeta.classList.add("visible");
+        }, 300 + (index * 150));
+    });
 
 });
