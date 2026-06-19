@@ -1,0 +1,176 @@
+/* ── FORMULARIO DE BÚSQUEDA ── */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background: var(--fondo-card);
+    border-radius: 18px;
+    border: 2px solid rgba(224, 0, 0, 0.35);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.formulario input {
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: #111111;
+    color: var(--color-texto);
+    border: 2px solid #2a2a2a;
+    font-size: 16px;
+    font-family: var(--font-texto);
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.formulario input::placeholder {
+    color: var(--color-texto-suave);
+}
+
+.formulario input:hover {
+    border-color: rgba(224, 0, 0, 0.5);
+}
+
+.formulario input:focus {
+    outline: none;
+    border-color: var(--rojo-principal);
+    box-shadow: 0 0 12px var(--rojo-glow);
+}
+
+/* ── BOTÓN BUSCAR ── */
+
+#btn_buscar {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--rojo-principal), var(--rojo-oscuro));
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--font-texto);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#btn_buscar:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 18px var(--rojo-glow);
+}
+
+#btn_buscar:active {
+    transform: scale(0.98);
+}
+
+/* ── TARJETA DE RESULTADOS ── */
+
+.tarjeta__especificaciones {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: var(--fondo-card);
+    border: 2px solid rgba(224, 0, 0, 0.3);
+    border-radius: 18px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+#tarjeta__informacion {
+    font-size: 1rem;
+    color: var(--color-texto-suave);
+    text-align: center;
+    margin-bottom: 1rem;
+    min-height: 1.5rem;
+}
+
+/* ── TABLA DE ESPECIFICACIONES ── */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    padding: 12px 16px;
+    background: linear-gradient(90deg, var(--rojo-oscuro), #500000);
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+td {
+    padding: 11px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--color-texto);
+    font-size: 0.95rem;
+}
+
+td:first-child {
+    color: var(--color-texto-suave);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tr:hover td {
+    background: rgba(224, 0, 0, 0.08);
+}
+
+/* ── BOTÓN DE FAVORITO ── */
+
+.btn__favorito {
+    display: none;
+    width: 100%;
+    padding: 14px;
+    margin-top: 1.5rem;
+    border: 2px solid rgba(224, 0, 0, 0.5);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--color-texto-suave);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-texto);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn__favorito:hover {
+    background: rgba(224, 0, 0, 0.15);
+    border-color: var(--rojo-principal);
+    color: var(--rojo-principal);
+}
+
+.btn__favorito.activo {
+    color: var(--rojo-principal);
+    border-color: var(--rojo-principal);
+    background: rgba(224, 0, 0, 0.15);
+}
+
+/* ── DESKTOP ── */
+
+@media (min-width: 768px) {
+    .formulario {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 750px;
+        margin: auto;
+    }
+
+    .formulario input {
+        flex: 1;
+        min-width: 160px;
+    }
+
+    #btn_buscar {
+        width: 100%;
+    }
+
+    .tarjeta__especificaciones {
+        max-width: 900px;
+        margin: 2rem auto 0;
+    }
+}

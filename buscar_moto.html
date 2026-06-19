@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/busqueda.css">
+    <title>Buscar Moto | MotoLovers</title>
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="./img/Motoloveres_logo.png" alt="Logo de Motolovers">
+        <nav class="header__menu">
+            <input type="checkbox" id="menu" class="menu__checkbox">
+            <label for="menu" class="header__hamburguer">
+                &#9776;
+            </label>
+            <!-- BUG CORREGIDO: links vacíos reemplazados por rutas reales -->
+            <ul>
+                <li><a href="./index.html">INICIO</a></li>
+                <li><a href="./comparaciones.html">COMPARAR</a></li>
+                <li><a href="./buscar_moto.html" class="active">BUSCAR MOTO</a></li>
+                <li><a href="./novedades.html">NOVEDADES</a></li>
+                <li><a href="./favoritos.html">FAVORITOS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contenedor">
+        <div class="contenedor__contenido">
+            <h1 class="titulo">
+                Buscador de Motocicletas
+            </h1>
+            <form id="formulario_busqueda" class="formulario">
+                <input id="marca__moto" type="text" placeholder="Marca (ej: Kawasaki)">
+                <input id="modelo__moto" type="text" placeholder="Modelo (ej: Ninja)">
+                <input id="anio__moto" type="number" placeholder="Año (ej: 2024)" min="1980" max="2025">
+                <button type="button" id="btn_buscar">
+                    Buscar Moto
+                </button>
+            </form>
+            <article class="tarjeta__especificaciones">
+                <h2 id="tarjeta__informacion">
+                    Esperando búsqueda...
+                </h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo__especificaciones">
+                    </tbody>
+                </table>
+                <button id="btn_favorito" class="btn__favorito" style="display: none;">
+                    ♡ Agregar a Favoritos
+                </button>
+            </article>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h3>Motolovers</h3>
+        <p>
+            Contáctanos:
+            <br>
+            <span>motolovers@gmail.com</span>
+        </p>
+        <nav class="redes_sociales">
+            <a href="#" aria-label="Facebook">
+                <img src="./icon/facebook_icon_130940.png" alt="Facebook">
+            </a>
+            <a href="#" aria-label="Instagram">
+                <img src="./icon/3721672-instagram_108066.png" alt="Instagram">
+            </a>
+            <a href="#" aria-label="X / Twitter">
+                <img src="./icon/twitter_x_logo_icon_258917.png" alt="X">
+            </a>
+        </nav>
+    </footer>
+
+    <script type="module" src="./js/buscar.js"></script>
+</body>
+</html>
