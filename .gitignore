@@ -1,0 +1,30 @@
+# Configuración de API (contiene clave privada)
+js/config.js
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencias de Node
+node_modules/
+package-lock.json
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos temporales
+*.tmp
+*.temp
