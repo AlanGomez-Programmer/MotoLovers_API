@@ -22,11 +22,13 @@
                 &#9776;
             </label>
 
+            <!-- BUG CORREGIDO: los href estaban vacíos, ahora apuntan a las páginas correctas -->
             <ul>
-                <li><a href="">INICIO</a></li>
-                <li><a href="">COMPARAR</a></li>
-                <li><a href="">TOP 10 MEJORES MOTOS</a></li>
-                <li><a href="">NOVEDADES</a></li>
+                <li><a href="./index.html" class="active">INICIO</a></li>
+                <li><a href="./comparaciones.html">COMPARAR</a></li>
+                <li><a href="./buscar_moto.html">BUSCAR MOTO</a></li>
+                <li><a href="./novedades.html">NOVEDADES</a></li>
+                <li><a href="./favoritos.html">FAVORITOS</a></li>
             </ul>
         </nav>
     </header>
@@ -53,7 +55,7 @@
 
                     <img
                         id="mejor__moto"
-                        src="./img/ninja_zx-4r.jpeg"
+                        src="./img/Ninja_zx-4r.jpeg"
                         alt="Kawasaki Ninja ZX-4R"
                     >
 
@@ -61,13 +63,11 @@
 
                         <h2 id="moto__nombre"></h2>
 
-                        <ul id="moto__especificaciones"></ul>
-
                         <table id="tabla__moto">
 
                             <thead>
                                 <tr>
-                                    <th>Nombre</th>
+                                    <th>Característica</th>
                                     <th>Especificación</th>
                                 </tr>
                             </thead>
@@ -148,15 +148,15 @@
 
         <nav class="redes_sociales">
 
-            <a href="">
+            <a href="#" aria-label="Facebook">
                 <img src="./icon/facebook_icon_130940.png" alt="Facebook">
             </a>
 
-            <a href="">
+            <a href="#" aria-label="Instagram">
                 <img src="./icon/3721672-instagram_108066.png" alt="Instagram">
             </a>
 
-            <a href="">
+            <a href="#" aria-label="X / Twitter">
                 <img src="./icon/twitter_x_logo_icon_258917.png" alt="X">
             </a>
 
@@ -164,7 +164,7 @@
 
     </footer>
 
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 
 </body>
 </html>

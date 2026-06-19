@@ -2,70 +2,182 @@
 
 /* ── HEADER ── */
 header {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100px;        
-  background-color: var(--fondo-principal);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    margin: 0;
+    padding: 0 1rem;
+    width: 100vw;
+    height: 80px;
+    background-color: var(--fondo-principal);
+    border-bottom: 2px solid var(--rojo-principal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* ── LOGO ── */
-
-.logo{
-  width: 180px;             
+.logo {
+    width: 160px;
 }
 
 .menu__checkbox {
-  display: none;
+    display: none;
 }
 
 .header__hamburguer {
-  font-size: 2.5rem;        
-  cursor: pointer;
-  color: white;
-  margin-right: 1rem;
-  user-select: none;
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: var(--rojo-principal);
+    margin-right: 0.5rem;
+    user-select: none;
+    transition: color 0.2s;
+}
+
+.header__hamburguer:hover {
+    color: white;
 }
 
 .header__menu ul {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 100px;                
-  right: 0;
-  width: 100%;
-  background-color: var(--fondo-terciario);
-  padding: 20px 0;
-  list-style: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background-color: var(--fondo-principal);
+    border-top: 1px solid var(--rojo-oscuro);
+    padding: 1rem 0;
+    list-style: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
 }
 
 .menu__checkbox:checked ~ ul {
-  display: flex;
+    display: flex;
 }
 
 .header__menu ul li a {
-  display: block;
-  padding: 15px 30px;
-  color: var(--color-texto);
-  text-decoration: none;
-  font-size: 1.1rem;
+    display: block;
+    padding: 14px 28px;
+    color: var(--color-texto); /* BUG CORREGIDO: --color-texto estaba indefinido en layout.css */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s, background 0.2s;
 }
 
+.header__menu ul li a:hover {
+    color: var(--rojo-principal);
+    background-color: rgba(224, 0, 0, 0.08);
+}
+
+.header__menu ul li a.active {
+    color: var(--rojo-principal);
+    border-left: 3px solid var(--rojo-principal);
+}
+
+/* ── CONTENEDOR PRINCIPAL ── */
 .contenedor {
     width: 100vw;
-    padding: 2rem 1rem;
+    padding: 2rem 1.25rem;
 }
 
 .contenedor__contenido {
     width: 100%;
 }
 
-.titulo  {
+.titulo {
     font-family: var(--font-titulos);
     text-align: center;
     margin-bottom: 2rem;
+    color: var(--color-texto);
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px var(--rojo-glow);
 }
 
+/* ── DESKTOP ── */
+@media (min-width: 768px) {
+    header {
+        padding: 0 2rem;
+    }
+
+    .header__hamburguer {
+        display: none;
+    }
+
+    .header__menu ul {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: transparent;
+        border: none;
+        padding: 0;
+        gap: 0.25rem;
+        box-shadow: none;
+        width: auto;
+    }
+
+    .header__menu ul li a {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+        border-radius: 6px;
+    }
+
+    .header__menu ul li a:hover {
+        background-color: rgba(224, 0, 0, 0.12);
+    }
+
+    .contenedor {
+        padding: 3rem 2rem;
+    }
+}
+
+/* ── FOOTER ── */
+
+.footer {
+    width: 100%;
+    padding: 1.75rem 1rem;
+    background-color: var(--fondo-principal);
+    border-top: 2px solid rgba(224, 0, 0, 0.25);
+    color: var(--color-texto-suave);
+    text-align: center;
+}
+
+.footer h3 {
+    font-family: var(--font-titulos);
+    font-size: 1.4rem;
+    color: white;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.footer p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer span {
+    color: var(--rojo-principal);
+}
+
+.redes_sociales {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.redes_sociales img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0.75) grayscale(0.3);
+    transition: filter 0.2s, transform 0.2s;
+}
+
+.redes_sociales a:hover img {
+    filter: brightness(1) grayscale(0);
+    transform: scale(1.1);
+}
