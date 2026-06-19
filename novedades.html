@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/novedades.css">
+    <title>Novedades | MotoLovers</title>
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" src="./img/Motoloveres_logo.png" alt="Logo de Motolovers">
+
+        <nav class="header__menu">
+            <input type="checkbox" id="menu" class="menu__checkbox">
+
+            <label for="menu" class="header__hamburguer">
+                &#9776;
+            </label>
+
+            <ul>
+                <li><a href="./index.html">INICIO</a></li>
+                <li><a href="./comparaciones.html">COMPARAR</a></li>
+                <li><a href="./buscar_moto.html">BUSCAR MOTO</a></li>
+                <li><a href="./novedades.html" class="active">NOVEDADES</a></li>
+                <li><a href="./favoritos.html">FAVORITOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contenedor">
+        <div class="contenedor__contenido">
+            <h1 class="titulo">Novedades</h1>
+
+            <div id="loading" class="loading">
+                <p>Cargando novedades...</p>
+            </div>
+
+            <div id="error" class="error">
+                <p>No se pudieron cargar las novedades. Por favor, intenta nuevamente.</p>
+            </div>
+
+            <div id="grid__novedades" class="grid__novedades">
+                <!-- Las tarjetas de motos se generarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de detalles -->
+    <div id="modal__detalles" class="modal__detalles">
+        <div class="modal__contenido">
+            <button id="btn__cerrar" class="btn__cerrar">&times;</button>
+            
+            <img id="modal__imagen" src="" alt="" class="modal__imagen">
+            
+            <h2 id="modal__titulo" class="modal__titulo"></h2>
+            
+            <table class="modal__tabla">
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Especificación</th>
+                    </tr>
+                </thead>
+                <tbody id="modal__cuerpo">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h3>Motolovers</h3>
+        <p>
+            Contáctanos:
+            <br>
+            <span>motolovers@gmail.com</span>
+        </p>
+        <nav class="redes_sociales">
+            <a href="#" aria-label="Facebook">
+                <img src="./icon/facebook_icon_130940.png" alt="Facebook">
+            </a>
+            <a href="#" aria-label="Instagram">
+                <img src="./icon/3721672-instagram_108066.png" alt="Instagram">
+            </a>
+            <a href="#" aria-label="X / Twitter">
+                <img src="./icon/twitter_x_logo_icon_258917.png" alt="X">
+            </a>
+        </nav>
+    </footer>
+
+    <script type="module" src="./js/novedades.js"></script>
+
+</body>
+
+</html>
